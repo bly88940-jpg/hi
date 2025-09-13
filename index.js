@@ -3,7 +3,8 @@ const fs = require("fs");
 
 // ===== قراءة إعدادات البوت =====
 const config = JSON.parse(fs.readFileSync("./config.json", "utf-8"));
-const TOKEN = config.TOKEN;
+const TOKEN = process.env.TOKEN;
+    
 const BOT_ID = config.BOT_ID;
 const GUILD_ID = config.GUILD_ID;
 
